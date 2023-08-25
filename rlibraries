@@ -1,0 +1,126 @@
+
+knitr::opts_chunk$set(echo = FALSE, include = FALSE,eval = FALSE)
+
+# general libraries 
+library(zoo)
+library(tidyverse)
+library(lubridate)
+library(openxlsx)
+library(openxlsx2)
+library(readxl)
+library(officer)
+library(flextable)
+library(tsibble)
+library(flexdashboard)
+library(DT)
+library(htmlwidgets)
+library(pins)
+library(lobstr)
+library(data.table)
+library(pdftools)
+library(pdfsearch)
+library(htmltools)
+library(rmarkdown)
+library(officedown)
+library(citr)
+
+## file management
+library(fs)
+library(DBI)
+library(RSQLite)
+library(uuid)
+library(here)
+library(usethis)
+library(rio)
+library(dbmisc)
+
+## plots
+library(patchwork)
+library(ggthemes)
+library(scales)
+library(ggrepel)
+library(grid)
+library(gridExtra)
+library(cowplot)
+library(plotly)
+
+#Web
+library(httr)
+library(rvest)
+library(jsonlite)
+library(xml2)
+library(XML)
+library(ftExtra)
+
+## geography libraries ##
+
+library(mapproj)
+library(maps)
+library(ggmap)
+library(usmap)
+library(sf)
+library(sp)
+library(rgeos)
+library(maptools)
+library(ggalt)
+library(viridis)
+library(leaflet)
+
+# MISC shiny
+library(shiny)
+library(shinycssloaders)
+library(shinyFeedback)
+library(shinyjs)
+library(gganimate) 
+library(vtree)
+library(shinymanager)
+library(pool)
+
+#quant
+library(quantmod)
+library(xts)
+library(dygraphs)
+library(PerformanceAnalytics)
+library(Quandl)
+library(yfR)
+library(tidyquant)
+
+library(DataEditR)
+library(gt)
+library(Hmisc)
+
+
+eu_xl_date_fn <- function(x,...){
+  as.Date(as.integer(x),origin ="1899-12-30")
+}
+
+## chart template ##
+
+chart <-
+  theme(
+    text = element_text(
+      family = "serif",
+      color = "black",
+      face = "bold"
+    ),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.title = element_blank(),
+    legend.text = element_text(size = 14),
+    plot.title = element_text(
+      size = 18,
+      hjust = 0,
+      margin = margin(0, 0, 5, 0)
+    ),
+    plot.subtitle = element_text(size = 16),
+    plot.caption = element_text(size = 14,
+                                hjust = 0),
+    panel.background = element_blank(),
+    axis.line = element_line(size = 1.5),
+    axis.text = element_text(size = 16),
+    axis.title = element_text(size = 18)
+  )
+
+getwd()
+
+
