@@ -23,6 +23,8 @@ library(htmltools)
 library(rmarkdown)
 library(officedown)
 library(citr)
+library(gt)
+library(Hmisc)
 
 ## file management
 library(fs)
@@ -85,9 +87,8 @@ library(Quandl)
 library(yfR)
 library(tidyquant)
 
-library(DataEditR)
-library(gt)
-library(Hmisc)
+
+
 
 
 eu_xl_date_fn <- function(x,...){
